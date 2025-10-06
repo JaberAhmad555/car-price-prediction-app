@@ -5,7 +5,7 @@ import shap
 import joblib
 
 # Load the trained model and the SHAP explainer
-model = joblib.load("car_price_model.pkl")
+model = joblib.load("car_price_model(1).pkl")
 explainer = joblib.load("shap_explainer.pkl")
 
 st.title("Car Price Prediction App")
