@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: carvalue-bd-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements-lock.txt && python -m backend.verify_release
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: CORS_ORIGINS
+        sync: false
+      - key: CARVALUE_MODEL_DIR
+        value: artifacts/valuation
+      - key: REQUIRE_MODEL
+        value: '1'
+      - key: OMP_NUM_THREADS
+        value: '2'
+      - key: OPENBLAS_NUM_THREADS
+        value: '2'

@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:bd-car-platform:market-record:0.1.0",
+  "title": "Bangladesh normalized market record",
+  "description": "Phase 1 record contract, not training eligibility or an inference request. Monetary amounts are whole BDT, never implicit lakhs.",
+  "oneOf": [
+    {"$ref": "#/$defs/data_source"},
+    {"$ref": "#/$defs/vehicle"},
+    {"$ref": "#/$defs/listing"},
+    {"$ref": "#/$defs/listing_observation"},
+    {"$ref": "#/$defs/condition_observation"},
+    {"$ref": "#/$defs/registration_observation"}
+  ],
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "nullable_text": {"anyOf": [{"$ref": "#/$defs/text"}, {"type": "null"}]},
+    "date": {"type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "nullable_date": {"anyOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "year": {"type": ["integer", "null"], "minimum": 1, "maximum": 9999},
+    "permission": {"enum": ["permitted", "prohibited", "unknown"]},
+    "base": {
+      "type": "object",
+      "required": ["schema_version", "entity_type", "id", "market"],
+      "properties": {
+        "schema_version": {"const": "0.1.0"},
+        "entity_type": {"type": "string"},
+        "id": {"$ref": "#/$defs/text"},
+        "market": {"const": "BD"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "source_record_ref", "collected_on", "collection_date_status", "raw_values", "normalization_version"],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/text"},
+        "source_record_ref": {"$ref": "#/$defs/text"},
+        "source_url": {"$ref": "#/$defs/nullable_text"},
+        "snapshot_ref": {"$ref": "#/$defs/nullable_text"},
+        "collected_on": {"$ref": "#/$defs/nullable_date"},
+        "collection_date_status": {"enum": ["known", "unknown"]},
+        "raw_values": {"type": "object", "minProperties": 1},
+        "normalization_version": {"$ref": "#/$defs/text"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"collection_date_status": {"const": "known"}}},
+          "then": {"properties": {"collected_on": {"$ref": "#/$defs/date"}}},
+          "else": {"properties": {"collected_on": {"type": "null"}}}
+        }
+      ]
+    },
+    "sourced_record": {
+      "allOf": [{"$ref": "#/$defs/base"}],
+      "required": ["provenance"],
+      "properties": {"provenance": {"$ref": "#/$defs/provenance"}}
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["storage", "automated_collection", "ml_training", "derived_predictions", "public_display", "redistribution"],
+      "properties": {
+        "storage": {"$ref": "#/$defs/permission"},
+        "automated_collection": {"$ref": "#/$defs/permission"},
+        "ml_training": {"$ref": "#/$defs/permission"},
+        "derived_predictions": {"$ref": "#/$defs/permission"},
+        "public_display": {"$ref": "#/$defs/permission"},
+        "redistribution": {"$ref": "#/$defs/permission"}
+      }
+    },
+    "data_source": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "if": {"properties": {"eligibility": {"const": "approved_for_valuation"}}, "required": ["eligibility"]},
+          "then": {
+            "properties": {
+              "reviewed_on": {"$ref": "#/$defs/date"},
+              "license_terms_ref": {"$ref": "#/$defs/text"},
+              "review_evidence_ref": {"$ref": "#/$defs/text"},
+              "attribution_requirements": {"$ref": "#/$defs/text"},
+              "restrictions": {"$ref": "#/$defs/text"},
+              "permissions": {
+                "properties": {
+                  "storage": {"const": "permitted"},
+                  "ml_training": {"const": "permitted"},
+                  "derived_predictions": {"const": "permitted"}
+                }
+              }
+            },
+            "if": {"properties": {"acquisition_method": {"enum": ["api", "automated_collection"]}}},
+            "then": {"properties": {"permissions": {"properties": {"automated_collection": {"const": "permitted"}}}}}
+          }
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": ["provider", "source_reference", "acquisition_method", "license_terms_ref", "reviewed_on", "review_evidence_ref", "permissions", "attribution_requirements", "restrictions", "eligibility"],
+      "properties": {
+        "entity_type": {"const": "data_source"},
+        "provider": {"$ref": "#/$defs/text"},
+        "source_reference": {"$ref": "#/$defs/text"},
+        "acquisition_method": {"enum": ["published_dataset", "provider_export", "manual_curation", "api", "automated_collection"]},
+        "license_terms_ref": {"$ref": "#/$defs/nullable_text"},
+        "reviewed_on": {"$ref": "#/$defs/nullable_date"},
+        "review_evidence_ref": {"$ref": "#/$defs/nullable_text"},
+        "permissions": {"$ref": "#/$defs/permissions"},
+        "attribution_requirements": {"$ref": "#/$defs/nullable_text"},
+        "restrictions": {"$ref": "#/$defs/nullable_text"},
+        "eligibility": {"enum": ["pending_review", "approved_for_valuation", "rejected"]}
+      }
+    },
+    "vehicle": {
+      "allOf": [{"$ref": "#/$defs/sourced_record"}],
+      "unevaluatedProperties": false,
+      "required": ["make", "model"],
+      "properties": {
+        "entity_type": {"const": "vehicle"},
+        "make": {"$ref": "#/$defs/nullable_text"},
+        "model": {"$ref": "#/$defs/nullable_text"},
+        "variant": {"$ref": "#/$defs/nullable_text"},
+        "manufacture_year": {"$ref": "#/$defs/year"},
+        "model_year": {"$ref": "#/$defs/year"},
+        "engine_cc": {"type": ["integer", "null"], "exclusiveMinimum": 0},
+        "fuel_type": {"$ref": "#/$defs/nullable_text"},
+        "hybrid_status": {"type": ["boolean", "null"]},
+        "transmission": {"$ref": "#/$defs/nullable_text"},
+        "body_type": {"$ref": "#/$defs/nullable_text"},
+        "colour": {"$ref": "#/$defs/nullable_text"}
+      }
+    },
+    "listing": {
+      "allOf": [{"$ref": "#/$defs/sourced_record"}],
+      "unevaluatedProperties": false,
+      "required": ["vehicle_id", "market_category", "listed_on", "location"],
+      "properties": {
+        "entity_type": {"const": "listing"},
+        "vehicle_id": {"$ref": "#/$defs/text"},
+        "market_category": {"enum": ["Local Used", "Foreign Used", "Reconditioned", "Brand New", null]},
+        "listed_on": {"$ref": "#/$defs/nullable_date"},
+        "location": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "district": {"$ref": "#/$defs/nullable_text"},
+            "city": {"$ref": "#/$defs/nullable_text"}
+          }
+        },
+        "seller_type": {"$ref": "#/$defs/nullable_text"},
+        "source_listing_url": {"$ref": "#/$defs/nullable_text"}
+      }
+    },
+    "listing_observation": {
+      "allOf": [
+        {"$ref": "#/$defs/sourced_record"},
+        {
+          "if": {"properties": {"amount_kind": {"enum": ["deposit", "monthly_payment", "unknown"]}}, "required": ["amount_kind"]},
+          "then": {"properties": {"asking_price_bdt": {"type": "null"}}}
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": ["listing_id", "observed_on", "currency", "price_type", "amount_kind", "asking_price_bdt"],
+      "properties": {
+        "entity_type": {"const": "listing_observation"},
+        "listing_id": {"$ref": "#/$defs/text"},
+        "observed_on": {"$ref": "#/$defs/nullable_date"},
+        "currency": {"const": "BDT"},
+        "price_type": {"const": "asking"},
+        "amount_kind": {"enum": ["full_asking_price", "deposit", "monthly_payment", "unknown"]},
+        "asking_price_bdt": {"type": ["integer", "null"], "exclusiveMinimum": 0, "description": "Full asking amount in whole BDT. Null if unknown or not a full asking amount. Not a predictor."},
+        "mileage_km": {"type": ["integer", "null"], "minimum": 0},
+        "negotiable": {"type": ["boolean", "null"]},
+        "availability": {"enum": ["active", "removed", "unknown"]}
+      }
+    },
+    "condition_observation": {
+      "allOf": [{"$ref": "#/$defs/sourced_record"}],
+      "unevaluatedProperties": false,
+      "required": ["vehicle_id", "observed_on", "evidence_status", "reported_condition", "accident_history"],
+      "properties": {
+        "entity_type": {"const": "condition_observation"},
+        "vehicle_id": {"$ref": "#/$defs/text"},
+        "observed_on": {"$ref": "#/$defs/nullable_date"},
+        "evidence_status": {"enum": ["reported", "verified", "unverified"]},
+        "evidence_reference": {"$ref": "#/$defs/nullable_text"},
+        "reported_condition": {"$ref": "#/$defs/nullable_text"},
+        "accident_history": {"type": ["boolean", "null"]},
+        "previous_owners": {"type": ["integer", "null"], "minimum": 0},
+        "auction_grade": {"$ref": "#/$defs/nullable_text"},
+        "auction_grade_system": {"$ref": "#/$defs/nullable_text"},
+        "visible_damage_notes": {"$ref": "#/$defs/nullable_text"}
+      }
+    },
+    "registration_observation": {
+      "allOf": [
+        {"$ref": "#/$defs/sourced_record"},
+        {
+          "if": {"properties": {"registration_status": {"const": "unregistered"}}, "required": ["registration_status"]},
+          "then": {"properties": {"registration_year": {"type": "null"}}}
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": ["vehicle_id", "observed_on", "evidence_status", "registration_status", "registration_year"],
+      "properties": {
+        "entity_type": {"const": "registration_observation"},
+        "vehicle_id": {"$ref": "#/$defs/text"},
+        "observed_on": {"$ref": "#/$defs/nullable_date"},
+        "evidence_status": {"enum": ["reported", "verified", "unverified"]},
+        "evidence_reference": {"$ref": "#/$defs/nullable_text"},
+        "registration_status": {"enum": ["registered", "unregistered", null]},
+        "registration_year": {"$ref": "#/$defs/year"},
+        "registration_region": {"$ref": "#/$defs/nullable_text"},
+        "documentation_status": {"$ref": "#/$defs/nullable_text"},
+        "tax_token_valid_until": {"$ref": "#/$defs/nullable_date"},
+        "fitness_valid_until": {"$ref": "#/$defs/nullable_date"}
+      }
+    }
+  }
+}

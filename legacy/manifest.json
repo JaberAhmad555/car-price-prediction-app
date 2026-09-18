@@ -1,0 +1,30 @@
+{
+  "purpose": "Historical preservation only; prohibited for Bangladesh production inference",
+  "source_commit": "ae501458f26e849d58d86f5a316ac927d95dd291",
+  "files": [
+    {
+      "path": "app.py",
+      "hash_mode": "normalize_crlf_to_lf",
+      "sha256": "ce852888520bf1eb9620cc8411df5537c73c19609cf1c614a2410a8f16d06c0f",
+      "original_checkout_sha256": "ec9844100a123e4ac8ee26c661d70d345e55700856074e628e38d6e6122553d8"
+    },
+    {
+      "path": "requirements.txt",
+      "hash_mode": "normalize_crlf_to_lf",
+      "sha256": "f1b7b9a9a854c6e74d7b8e650b114dd96755dfae1413aed6865f43d6a17c0c91",
+      "original_checkout_sha256": "db9bcddf862f7d4cf371bae21d3324eb82461a359342e024ba4ff0165c64de9d"
+    },
+    {
+      "path": "car_price_model (1).pkl",
+      "hash_mode": "bytes",
+      "sha256": "d4c05602b43330161abfb87fa6cd606190289db1446367fe189e4b2d8e409dce",
+      "original_checkout_sha256": "d4c05602b43330161abfb87fa6cd606190289db1446367fe189e4b2d8e409dce"
+    },
+    {
+      "path": "shap_explainer.pkl",
+      "hash_mode": "bytes",
+      "sha256": "a3fbd24dbb4c8fec3b3a689ac6b0a592b9ade21a86b603bd0ded8987faeb8ea1",
+      "original_checkout_sha256": "a3fbd24dbb4c8fec3b3a689ac6b0a592b9ade21a86b603bd0ded8987faeb8ea1"
+    }
+  ]
+}
