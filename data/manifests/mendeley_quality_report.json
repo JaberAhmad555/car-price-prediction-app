@@ -1,0 +1,1500 @@
+{
+  "actual_column_names": [
+    "car_name",
+    "brand",
+    "car_model",
+    "model_year",
+    "transmission",
+    "body_type",
+    "fuel_type",
+    "engine_capacity",
+    "kilometers_run",
+    "price"
+  ],
+  "brand_model_counts": {
+    "[\"audi\", \"q5\"]": 1,
+    "[\"bmw\", \"320i\"]": 1,
+    "[\"bmw\", \"5 series\"]": 1,
+    "[\"chery\", \"other model\"]": 1,
+    "[\"chevrolet\", \"spark\"]": 1,
+    "[\"daihatsu\", \"rocky\"]": 2,
+    "[\"ford\", \"eco sport\"]": 1,
+    "[\"ford\", \"fiesta\"]": 1,
+    "[\"ford\", \"ikon\"]": 1,
+    "[\"haval\", \"h2\"]": 1,
+    "[\"honda\", \"city\"]": 2,
+    "[\"honda\", \"civic\"]": 3,
+    "[\"honda\", \"cr-v\"]": 10,
+    "[\"honda\", \"cr-z\"]": 1,
+    "[\"honda\", \"fit\"]": 2,
+    "[\"honda\", \"grace\"]": 25,
+    "[\"honda\", \"h-rv\"]": 1,
+    "[\"honda\", \"hr-v\"]": 1,
+    "[\"honda\", \"insight\"]": 1,
+    "[\"honda\", \"s660\"]": 1,
+    "[\"honda\", \"vezel\"]": 18,
+    "[\"hyundai\", \"accent\"]": 5,
+    "[\"hyundai\", \"h1\"]": 3,
+    "[\"hyundai\", \"santa fe\"]": 1,
+    "[\"hyundai\", \"sonata\"]": 2,
+    "[\"hyundai\", \"tucson\"]": 4,
+    "[\"isuzu\", \"other model\"]": 1,
+    "[\"jaguar\", \"xj\"]": 1,
+    "[\"kia\", \"other model\"]": 2,
+    "[\"kia\", \"sportage\"]": 1,
+    "[\"land rover\", \"discovery\"]": 1,
+    "[\"lexus\", \"harrier\"]": 2,
+    "[\"lexus\", \"nx\"]": 1,
+    "[\"lexus\", \"rx\"]": 1,
+    "[\"mahindra\", \"other model\"]": 1,
+    "[\"maruti suzuki\", \"alto 800\"]": 1,
+    "[\"maruti suzuki\", \"vitara brezza\"]": 1,
+    "[\"maruti suzuki\", \"wagonr\"]": 2,
+    "[\"mazda\", \"axela\"]": 6,
+    "[\"mazda\", \"cx-7\"]": 1,
+    "[\"mazda\", \"mpv\"]": 1,
+    "[\"mazda\", \"rx-8\"]": 1,
+    "[\"mercedes-benz\", \"c-class\"]": 1,
+    "[\"mercedes-benz\", \"e 250\"]": 1,
+    "[\"mercedes-benz\", \"gla-class\"]": 1,
+    "[\"mitsubishi\", \"attrage\"]": 1,
+    "[\"mitsubishi\", \"glx\"]": 1,
+    "[\"mitsubishi\", \"l200\"]": 1,
+    "[\"mitsubishi\", \"l300\"]": 1,
+    "[\"mitsubishi\", \"lancer\"]": 5,
+    "[\"mitsubishi\", \"other model\"]": 2,
+    "[\"mitsubishi\", \"outlandar\"]": 3,
+    "[\"mitsubishi\", \"outlander\"]": 1,
+    "[\"mitsubishi\", \"pajero\"]": 7,
+    "[\"mitsubishi\", \"rvr\"]": 1,
+    "[\"mitsubishi\", \"v6\"]": 1,
+    "[\"nissan\", \"bluebird\"]": 2,
+    "[\"nissan\", \"carryboy\"]": 3,
+    "[\"nissan\", \"cefiro\"]": 1,
+    "[\"nissan\", \"dualis\"]": 1,
+    "[\"nissan\", \"juke\"]": 4,
+    "[\"nissan\", \"murano\"]": 1,
+    "[\"nissan\", \"note\"]": 1,
+    "[\"nissan\", \"other model\"]": 1,
+    "[\"nissan\", \"pathfinder\"]": 2,
+    "[\"nissan\", \"sunny\"]": 7,
+    "[\"nissan\", \"terrano\"]": 1,
+    "[\"nissan\", \"tiida\"]": 2,
+    "[\"nissan\", \"urvan\"]": 1,
+    "[\"nissan\", \"x-trail\"]": 40,
+    "[\"proton\", \"satria\"]": 1,
+    "[\"range rover\", \"cityrover\"]": 1,
+    "[\"ssangyong\", \"kyron\"]": 1,
+    "[\"ssangyong\", \"other model\"]": 1,
+    "[\"suzuki\", \"alto\"]": 2,
+    "[\"suzuki\", \"apv\"]": 1,
+    "[\"suzuki\", \"other model\"]": 3,
+    "[\"suzuki\", \"swift\"]": 6,
+    "[\"tata\", \"indigo ecs\"]": 3,
+    "[\"tata\", \"other model\"]": 2,
+    "[\"toyota\", \"allion\"]": 105,
+    "[\"toyota\", \"alphard\"]": 4,
+    "[\"toyota\", \"aqua\"]": 16,
+    "[\"toyota\", \"auris\"]": 2,
+    "[\"toyota\", \"avanza\"]": 2,
+    "[\"toyota\", \"axio\"]": 118,
+    "[\"toyota\", \"c-hr\"]": 21,
+    "[\"toyota\", \"cami\"]": 1,
+    "[\"toyota\", \"camry\"]": 1,
+    "[\"toyota\", \"carina\"]": 12,
+    "[\"toyota\", \"coaster\"]": 1,
+    "[\"toyota\", \"corolla\"]": 91,
+    "[\"toyota\", \"corona\"]": 7,
+    "[\"toyota\", \"corsa\"]": 5,
+    "[\"toyota\", \"crown\"]": 1,
+    "[\"toyota\", \"dyna\"]": 1,
+    "[\"toyota\", \"esquire\"]": 12,
+    "[\"toyota\", \"estima\"]": 1,
+    "[\"toyota\", \"fielder\"]": 53,
+    "[\"toyota\", \"harrier\"]": 24,
+    "[\"toyota\", \"hiace\"]": 76,
+    "[\"toyota\", \"hilux\"]": 6,
+    "[\"toyota\", \"ist\"]": 5,
+    "[\"toyota\", \"kluger\"]": 4,
+    "[\"toyota\", \"land cruiser\"]": 7,
+    "[\"toyota\", \"liteace\"]": 5,
+    "[\"toyota\", \"mark ii\"]": 3,
+    "[\"toyota\", \"mr2\"]": 1,
+    "[\"toyota\", \"noah\"]": 94,
+    "[\"toyota\", \"other model\"]": 16,
+    "[\"toyota\", \"passo\"]": 3,
+    "[\"toyota\", \"prado\"]": 17,
+    "[\"toyota\", \"premio\"]": 144,
+    "[\"toyota\", \"prius\"]": 14,
+    "[\"toyota\", \"probox\"]": 26,
+    "[\"toyota\", \"ractis\"]": 1,
+    "[\"toyota\", \"raum\"]": 4,
+    "[\"toyota\", \"rav4\"]": 13,
+    "[\"toyota\", \"runx\"]": 2,
+    "[\"toyota\", \"rush\"]": 8,
+    "[\"toyota\", \"sienta\"]": 5,
+    "[\"toyota\", \"spacio\"]": 2,
+    "[\"toyota\", \"sprinter\"]": 7,
+    "[\"toyota\", \"starlet soleil\"]": 1,
+    "[\"toyota\", \"starlet\"]": 5,
+    "[\"toyota\", \"succeed\"]": 5,
+    "[\"toyota\", \"townace\"]": 5,
+    "[\"toyota\", \"vista\"]": 1,
+    "[\"toyota\", \"vitz\"]": 15,
+    "[\"toyota\", \"voltz\"]": 1,
+    "[\"toyota\", \"wish\"]": 2,
+    "[\"toyota\", \"x assista\"]": 1,
+    "[\"toyota\", \"yaris\"]": 2
+  },
+  "categorical_counts_all_rows": {
+    "body_type": {
+      "convertible": 4,
+      "coupé/sports": 1,
+      "estate": 79,
+      "hatchback": 80,
+      "mpv": 201,
+      "saloon": 623,
+      "suv / 4x4": 203
+    },
+    "brand": {
+      "audi": 1,
+      "bmw": 2,
+      "chery": 1,
+      "chevrolet": 1,
+      "daihatsu": 2,
+      "ford": 3,
+      "haval": 1,
+      "honda": 65,
+      "hyundai": 15,
+      "isuzu": 1,
+      "jaguar": 1,
+      "kia": 3,
+      "land rover": 1,
+      "lexus": 4,
+      "mahindra": 1,
+      "maruti suzuki": 4,
+      "mazda": 9,
+      "mercedes-benz": 3,
+      "mitsubishi": 24,
+      "nissan": 67,
+      "proton": 1,
+      "range rover": 1,
+      "ssangyong": 2,
+      "suzuki": 12,
+      "tata": 5,
+      "toyota": 979
+    },
+    "car_model": {
+      "320i": 1,
+      "5 series": 1,
+      "accent": 5,
+      "allion": 105,
+      "alphard": 4,
+      "alto": 2,
+      "alto 800": 1,
+      "apv": 1,
+      "aqua": 16,
+      "attrage": 1,
+      "auris": 2,
+      "avanza": 2,
+      "axela": 6,
+      "axio": 118,
+      "bluebird": 2,
+      "c-class": 1,
+      "c-hr": 21,
+      "cami": 1,
+      "camry": 1,
+      "carina": 12,
+      "carryboy": 3,
+      "cefiro": 1,
+      "city": 2,
+      "cityrover": 1,
+      "civic": 3,
+      "coaster": 1,
+      "corolla": 91,
+      "corona": 7,
+      "corsa": 5,
+      "cr-v": 10,
+      "cr-z": 1,
+      "crown": 1,
+      "cx-7": 1,
+      "discovery": 1,
+      "dualis": 1,
+      "dyna": 1,
+      "e 250": 1,
+      "eco sport": 1,
+      "esquire": 12,
+      "estima": 1,
+      "fielder": 53,
+      "fiesta": 1,
+      "fit": 2,
+      "gla-class": 1,
+      "glx": 1,
+      "grace": 25,
+      "h-rv": 1,
+      "h1": 3,
+      "h2": 1,
+      "harrier": 26,
+      "hiace": 76,
+      "hilux": 6,
+      "hr-v": 1,
+      "ikon": 1,
+      "indigo ecs": 3,
+      "insight": 1,
+      "ist": 5,
+      "juke": 4,
+      "kluger": 4,
+      "kyron": 1,
+      "l200": 1,
+      "l300": 1,
+      "lancer": 5,
+      "land cruiser": 7,
+      "liteace": 5,
+      "mark ii": 3,
+      "mpv": 1,
+      "mr2": 1,
+      "murano": 1,
+      "noah": 94,
+      "note": 1,
+      "nx": 1,
+      "other model": 30,
+      "outlandar": 3,
+      "outlander": 1,
+      "pajero": 7,
+      "passo": 3,
+      "pathfinder": 2,
+      "prado": 17,
+      "premio": 144,
+      "prius": 14,
+      "probox": 26,
+      "q5": 1,
+      "ractis": 1,
+      "raum": 4,
+      "rav4": 13,
+      "rocky": 2,
+      "runx": 2,
+      "rush": 8,
+      "rvr": 1,
+      "rx": 1,
+      "rx-8": 1,
+      "s660": 1,
+      "santa fe": 1,
+      "satria": 1,
+      "sienta": 5,
+      "sonata": 2,
+      "spacio": 2,
+      "spark": 1,
+      "sportage": 1,
+      "sprinter": 7,
+      "starlet": 5,
+      "starlet soleil": 1,
+      "succeed": 5,
+      "sunny": 7,
+      "swift": 6,
+      "terrano": 1,
+      "tiida": 2,
+      "townace": 5,
+      "tucson": 4,
+      "urvan": 1,
+      "v6": 1,
+      "vezel": 18,
+      "vista": 1,
+      "vitara brezza": 1,
+      "vitz": 15,
+      "voltz": 1,
+      "wagonr": 2,
+      "wish": 2,
+      "x assista": 1,
+      "x-trail": 40,
+      "xj": 1,
+      "yaris": 2
+    },
+    "fuel_type": {
+      "cng": 8,
+      "cng, hybrid": 1,
+      "cng, octane": 405,
+      "diesel": 39,
+      "diesel, petrol": 1,
+      "hybrid": 56,
+      "hybrid, octane": 95,
+      "hybrid, octane, lpg": 1,
+      "lpg": 1,
+      "octane": 271,
+      "octane, lpg": 24,
+      "octane, other fuel type": 4,
+      "petrol": 24,
+      "petrol, cng": 30,
+      "petrol, cng, octane": 53,
+      "petrol, cng, octane, lpg": 1,
+      "petrol, hybrid": 1,
+      "petrol, hybrid, octane": 62,
+      "petrol, hybrid, octane, lpg": 1,
+      "petrol, lpg": 1,
+      "petrol, octane": 124,
+      "petrol, octane, lpg": 3,
+      "petrol, octane, other fuel type": 1,
+      "petrol, other fuel type": 2
+    },
+    "transmission": {
+      "automatic": 1146,
+      "manual": 63
+    }
+  },
+  "categorical_imbalance_flags": [
+    {
+      "category": "toyota",
+      "count": 979,
+      "field": "brand",
+      "nonmissing_total": 1209,
+      "share": 0.8097601323407775
+    },
+    {
+      "category": "automatic",
+      "count": 1146,
+      "field": "transmission",
+      "nonmissing_total": 1209,
+      "share": 0.9478908188585607
+    }
+  ],
+  "collection_date": null,
+  "dataset_id": "mendeley-fmb4xmp4k5-v2",
+  "duplicate_count": 1,
+  "duplicate_definition": "Rows beyond the first matching record, not verified duplicate physical vehicles.",
+  "extra_columns": [],
+  "file_sha256": "cec972d4cf707424115d7d965ea3355d267c45f80543f82a1c3482c27e907e69",
+  "flagged_rows": [
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 1
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 2
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 6
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 7
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 8
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 35
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 37
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 46
+    },
+    {
+      "issues": [
+        {
+          "field": "engine_capacity",
+          "reason": "outside_review_range",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 55
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 59
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 63
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 112
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 121
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 126
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 153
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 174
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 197
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 210
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 213
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 299
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 303
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 310
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 311
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 315
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 316
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 326
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 327
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 339
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 350
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 355
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 363
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 373
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 374
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 375
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 376
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 385
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 388
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 392
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 393
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 394
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 396
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 397
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 399
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 400
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 414
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 439
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 441
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 452
+    },
+    {
+      "issues": [
+        {
+          "field": "row",
+          "reason": "exact_duplicate",
+          "severity": "exclude"
+        }
+      ],
+      "source_row_number": 518
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 647
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 676
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 703
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 767
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 792
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 793
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 809
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 813
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 818
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 833
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 843
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 865
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 870
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 909
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 932
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 941
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 949
+    },
+    {
+      "issues": [
+        {
+          "field": "engine_capacity",
+          "reason": "outside_review_range",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 1117
+    },
+    {
+      "issues": [
+        {
+          "field": "model_year",
+          "reason": "title_year_conflict",
+          "severity": "review"
+        }
+      ],
+      "source_row_number": 1207
+    }
+  ],
+  "invalid_price_count": 0,
+  "issue_counts": {
+    "engine_capacity:outside_review_range": 2,
+    "model_year:title_year_conflict": 65,
+    "row:exact_duplicate": 1
+  },
+  "limitations": [
+    "Historical asking-price observations only",
+    "No inferred listing dates",
+    "No confirmed transaction prices",
+    "Numeric distributions include all parseable rows unless labeled usable"
+  ],
+  "matches_publisher_row_count": true,
+  "missing_price_count": 0,
+  "missing_values_per_column": {
+    "body_type": 18,
+    "brand": 0,
+    "car_model": 0,
+    "car_name": 0,
+    "engine_capacity": 0,
+    "fuel_type": 0,
+    "kilometers_run": 0,
+    "model_year": 0,
+    "price": 0,
+    "transmission": 0
+  },
+  "normalized_duplicate_count": 0,
+  "numeric_summary_all_parseable_rows": {
+    "engine_capacity": {
+      "count": 1209,
+      "max": 4500,
+      "mean": 1681.46,
+      "median": 1500,
+      "min": 150,
+      "p05": 1329.8,
+      "p25": 1500.0,
+      "p75": 1998.0,
+      "p95": 2400.0
+    },
+    "kilometers_run": {
+      "count": 1209,
+      "max": 900000,
+      "mean": 67294.83,
+      "median": 62000,
+      "min": 6,
+      "p05": 18090.0,
+      "p25": 39000.0,
+      "p75": 78952.0,
+      "p95": 129600.0
+    },
+    "model_year": {
+      "count": 1209,
+      "max": 2021,
+      "mean": 2009.56,
+      "median": 2011,
+      "min": 1983,
+      "p05": 1995.0,
+      "p25": 2005.0,
+      "p75": 2016.0,
+      "p95": 2017.0
+    },
+    "price": {
+      "count": 1209,
+      "max": 16000000,
+      "mean": 1909522.82,
+      "median": 1520000,
+      "min": 120000,
+      "p05": 365000.0,
+      "p25": 970000.0,
+      "p75": 2380000.0,
+      "p95": 4472000.0
+    }
+  },
+  "numeric_summary_usable_rows": {
+    "engine_capacity": {
+      "count": 1141,
+      "max": 4500,
+      "mean": 1686.2,
+      "median": 1500,
+      "min": 660,
+      "p05": 1331.0,
+      "p25": 1500.0,
+      "p75": 2000.0,
+      "p95": 2400.0
+    },
+    "kilometers_run": {
+      "count": 1141,
+      "max": 900000,
+      "mean": 65370.68,
+      "median": 60000,
+      "min": 6,
+      "p05": 18225.0,
+      "p25": 38172.0,
+      "p75": 77865.0,
+      "p95": 120000.0
+    },
+    "model_year": {
+      "count": 1141,
+      "max": 2021,
+      "mean": 2009.58,
+      "median": 2011,
+      "min": 1983,
+      "p05": 1995.0,
+      "p25": 2005.0,
+      "p75": 2016.0,
+      "p95": 2017.0
+    },
+    "price": {
+      "count": 1141,
+      "max": 16000000,
+      "mean": 1952614.86,
+      "median": 1570000,
+      "min": 120000,
+      "p05": 370000.0,
+      "p25": 985000.0,
+      "p75": 2430000.0,
+      "p95": 4550000.0
+    }
+  },
+  "pipeline_version": "0.2a.2",
+  "price_interpretation_counts": {
+    "reviewed_bare_BDT": 1209
+  },
+  "publisher_reported_row_count": 1209,
+  "rare_brand_model_pairs": {
+    "[\"audi\", \"q5\"]": 1,
+    "[\"bmw\", \"320i\"]": 1,
+    "[\"bmw\", \"5 series\"]": 1,
+    "[\"chery\", \"other model\"]": 1,
+    "[\"chevrolet\", \"spark\"]": 1,
+    "[\"daihatsu\", \"rocky\"]": 2,
+    "[\"ford\", \"eco sport\"]": 1,
+    "[\"ford\", \"fiesta\"]": 1,
+    "[\"ford\", \"ikon\"]": 1,
+    "[\"haval\", \"h2\"]": 1,
+    "[\"honda\", \"city\"]": 2,
+    "[\"honda\", \"civic\"]": 3,
+    "[\"honda\", \"cr-z\"]": 1,
+    "[\"honda\", \"fit\"]": 2,
+    "[\"honda\", \"h-rv\"]": 1,
+    "[\"honda\", \"hr-v\"]": 1,
+    "[\"honda\", \"insight\"]": 1,
+    "[\"honda\", \"s660\"]": 1,
+    "[\"hyundai\", \"h1\"]": 3,
+    "[\"hyundai\", \"santa fe\"]": 1,
+    "[\"hyundai\", \"sonata\"]": 2,
+    "[\"hyundai\", \"tucson\"]": 4,
+    "[\"isuzu\", \"other model\"]": 1,
+    "[\"jaguar\", \"xj\"]": 1,
+    "[\"kia\", \"other model\"]": 2,
+    "[\"kia\", \"sportage\"]": 1,
+    "[\"land rover\", \"discovery\"]": 1,
+    "[\"lexus\", \"harrier\"]": 2,
+    "[\"lexus\", \"nx\"]": 1,
+    "[\"lexus\", \"rx\"]": 1,
+    "[\"mahindra\", \"other model\"]": 1,
+    "[\"maruti suzuki\", \"alto 800\"]": 1,
+    "[\"maruti suzuki\", \"vitara brezza\"]": 1,
+    "[\"maruti suzuki\", \"wagonr\"]": 2,
+    "[\"mazda\", \"cx-7\"]": 1,
+    "[\"mazda\", \"mpv\"]": 1,
+    "[\"mazda\", \"rx-8\"]": 1,
+    "[\"mercedes-benz\", \"c-class\"]": 1,
+    "[\"mercedes-benz\", \"e 250\"]": 1,
+    "[\"mercedes-benz\", \"gla-class\"]": 1,
+    "[\"mitsubishi\", \"attrage\"]": 1,
+    "[\"mitsubishi\", \"glx\"]": 1,
+    "[\"mitsubishi\", \"l200\"]": 1,
+    "[\"mitsubishi\", \"l300\"]": 1,
+    "[\"mitsubishi\", \"other model\"]": 2,
+    "[\"mitsubishi\", \"outlandar\"]": 3,
+    "[\"mitsubishi\", \"outlander\"]": 1,
+    "[\"mitsubishi\", \"rvr\"]": 1,
+    "[\"mitsubishi\", \"v6\"]": 1,
+    "[\"nissan\", \"bluebird\"]": 2,
+    "[\"nissan\", \"carryboy\"]": 3,
+    "[\"nissan\", \"cefiro\"]": 1,
+    "[\"nissan\", \"dualis\"]": 1,
+    "[\"nissan\", \"juke\"]": 4,
+    "[\"nissan\", \"murano\"]": 1,
+    "[\"nissan\", \"note\"]": 1,
+    "[\"nissan\", \"other model\"]": 1,
+    "[\"nissan\", \"pathfinder\"]": 2,
+    "[\"nissan\", \"terrano\"]": 1,
+    "[\"nissan\", \"tiida\"]": 2,
+    "[\"nissan\", \"urvan\"]": 1,
+    "[\"proton\", \"satria\"]": 1,
+    "[\"range rover\", \"cityrover\"]": 1,
+    "[\"ssangyong\", \"kyron\"]": 1,
+    "[\"ssangyong\", \"other model\"]": 1,
+    "[\"suzuki\", \"alto\"]": 2,
+    "[\"suzuki\", \"apv\"]": 1,
+    "[\"suzuki\", \"other model\"]": 3,
+    "[\"tata\", \"indigo ecs\"]": 3,
+    "[\"tata\", \"other model\"]": 2,
+    "[\"toyota\", \"alphard\"]": 4,
+    "[\"toyota\", \"auris\"]": 2,
+    "[\"toyota\", \"avanza\"]": 2,
+    "[\"toyota\", \"cami\"]": 1,
+    "[\"toyota\", \"camry\"]": 1,
+    "[\"toyota\", \"coaster\"]": 1,
+    "[\"toyota\", \"crown\"]": 1,
+    "[\"toyota\", \"dyna\"]": 1,
+    "[\"toyota\", \"estima\"]": 1,
+    "[\"toyota\", \"kluger\"]": 4,
+    "[\"toyota\", \"mark ii\"]": 3,
+    "[\"toyota\", \"mr2\"]": 1,
+    "[\"toyota\", \"passo\"]": 3,
+    "[\"toyota\", \"ractis\"]": 1,
+    "[\"toyota\", \"raum\"]": 4,
+    "[\"toyota\", \"runx\"]": 2,
+    "[\"toyota\", \"spacio\"]": 2,
+    "[\"toyota\", \"starlet soleil\"]": 1,
+    "[\"toyota\", \"vista\"]": 1,
+    "[\"toyota\", \"voltz\"]": 1,
+    "[\"toyota\", \"wish\"]": 2,
+    "[\"toyota\", \"x assista\"]": 1,
+    "[\"toyota\", \"yaris\"]": 2
+  },
+  "rare_brands": {
+    "audi": 1,
+    "bmw": 2,
+    "chery": 1,
+    "chevrolet": 1,
+    "daihatsu": 2,
+    "ford": 3,
+    "haval": 1,
+    "isuzu": 1,
+    "jaguar": 1,
+    "kia": 3,
+    "land rover": 1,
+    "lexus": 4,
+    "mahindra": 1,
+    "maruti suzuki": 4,
+    "mercedes-benz": 3,
+    "proton": 1,
+    "range rover": 1,
+    "ssangyong": 2
+  },
+  "raw_row_count": 1209,
+  "review_thresholds": {
+    "description": "Initial review heuristics only. Values outside these ranges are retained and flagged, never silently corrected. These are not measured dataset statistics or learned market limits.",
+    "engine_max_cc": 10000,
+    "engine_min_cc": 400,
+    "imbalance_min_rows": 20,
+    "imbalance_share": 0.8,
+    "mileage_max_km": 1000000,
+    "model_year_min": 1950,
+    "price_max_bdt": 100000000,
+    "price_min_bdt": 100000,
+    "rare_category_count_below": 5
+  },
+  "status": "computed_from_local_file",
+  "suspicious_price_count": 0,
+  "top_brands": [
+    {
+      "brand": "toyota",
+      "count": 979
+    },
+    {
+      "brand": "nissan",
+      "count": 67
+    },
+    {
+      "brand": "honda",
+      "count": 65
+    },
+    {
+      "brand": "mitsubishi",
+      "count": 24
+    },
+    {
+      "brand": "hyundai",
+      "count": 15
+    },
+    {
+      "brand": "suzuki",
+      "count": 12
+    },
+    {
+      "brand": "mazda",
+      "count": 9
+    },
+    {
+      "brand": "tata",
+      "count": 5
+    },
+    {
+      "brand": "lexus",
+      "count": 4
+    },
+    {
+      "brand": "maruti suzuki",
+      "count": 4
+    }
+  ],
+  "unique_brand_count": 26,
+  "unique_brands": [
+    "audi",
+    "bmw",
+    "chery",
+    "chevrolet",
+    "daihatsu",
+    "ford",
+    "haval",
+    "honda",
+    "hyundai",
+    "isuzu",
+    "jaguar",
+    "kia",
+    "land rover",
+    "lexus",
+    "mahindra",
+    "maruti suzuki",
+    "mazda",
+    "mercedes-benz",
+    "mitsubishi",
+    "nissan",
+    "proton",
+    "range rover",
+    "ssangyong",
+    "suzuki",
+    "tata",
+    "toyota"
+  ],
+  "unique_model_count": 123,
+  "unique_models": [
+    "320i",
+    "5 series",
+    "accent",
+    "allion",
+    "alphard",
+    "alto",
+    "alto 800",
+    "apv",
+    "aqua",
+    "attrage",
+    "auris",
+    "avanza",
+    "axela",
+    "axio",
+    "bluebird",
+    "c-class",
+    "c-hr",
+    "cami",
+    "camry",
+    "carina",
+    "carryboy",
+    "cefiro",
+    "city",
+    "cityrover",
+    "civic",
+    "coaster",
+    "corolla",
+    "corona",
+    "corsa",
+    "cr-v",
+    "cr-z",
+    "crown",
+    "cx-7",
+    "discovery",
+    "dualis",
+    "dyna",
+    "e 250",
+    "eco sport",
+    "esquire",
+    "estima",
+    "fielder",
+    "fiesta",
+    "fit",
+    "gla-class",
+    "glx",
+    "grace",
+    "h-rv",
+    "h1",
+    "h2",
+    "harrier",
+    "hiace",
+    "hilux",
+    "hr-v",
+    "ikon",
+    "indigo ecs",
+    "insight",
+    "ist",
+    "juke",
+    "kluger",
+    "kyron",
+    "l200",
+    "l300",
+    "lancer",
+    "land cruiser",
+    "liteace",
+    "mark ii",
+    "mpv",
+    "mr2",
+    "murano",
+    "noah",
+    "note",
+    "nx",
+    "other model",
+    "outlandar",
+    "outlander",
+    "pajero",
+    "passo",
+    "pathfinder",
+    "prado",
+    "premio",
+    "prius",
+    "probox",
+    "q5",
+    "ractis",
+    "raum",
+    "rav4",
+    "rocky",
+    "runx",
+    "rush",
+    "rvr",
+    "rx",
+    "rx-8",
+    "s660",
+    "santa fe",
+    "satria",
+    "sienta",
+    "sonata",
+    "spacio",
+    "spark",
+    "sportage",
+    "sprinter",
+    "starlet",
+    "starlet soleil",
+    "succeed",
+    "sunny",
+    "swift",
+    "terrano",
+    "tiida",
+    "townace",
+    "tucson",
+    "urvan",
+    "v6",
+    "vezel",
+    "vista",
+    "vitara brezza",
+    "vitz",
+    "voltz",
+    "wagonr",
+    "wish",
+    "x assista",
+    "x-trail",
+    "xj",
+    "yaris"
+  ],
+  "usable_definition": "No exclude/review issue; complete core numeric fields and make/model; later exact duplicates excluded. Not current-market or model-readiness approval.",
+  "usable_row_count": 1141
+}

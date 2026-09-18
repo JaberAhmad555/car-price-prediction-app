@@ -25,7 +25,7 @@ CODE_SUFFIXES = {
 }
 IGNORED_DIRS = {
     ".git", ".venv", "venv", "env", "node_modules", "__pycache__",
-    ".pytest_cache", ".mypy_cache", ".ruff_cache",
+    ".pytest_cache", ".mypy_cache", ".ruff_cache", ".next", ".turbo",
 }
 
 

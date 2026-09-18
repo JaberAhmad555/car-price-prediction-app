@@ -16,7 +16,7 @@
 - Do not automatically scrape websites. Review and document source terms, permitted acquisition, storage, training, derived-output use, attribution, and provenance before acquisition.
 - Preserve source values, collection dates, normalization lineage, and verification status. Public visibility is not proof of reuse permission.
 - Keep training reproducible with versioned datasets/models, schemas, preprocessing, configurations, split manifests, seeds, dependencies, code revisions, checksums, and recorded evaluation.
-- Do not commit large datasets, generated model artifacts, user photographs, or sensitive records. Commit only small permitted fixtures labeled as synthetic/examples when applicable.
+- Do not commit large datasets, experimental model artifacts, user photographs, or sensitive records. The user-approved release exception is the reviewed Bangladesh pipeline and manifest in `artifacts/valuation/`; keep that small inference bundle deployable from Git. Commit only small permitted data fixtures labeled as synthetic/examples when applicable.
 - User-image processing consent does not grant training consent. Training reuse requires separate explicit permission; private storage, deletion, and retention rules must be documented and tested.
 
 ## Implementation and verification

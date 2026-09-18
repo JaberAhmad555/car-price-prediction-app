@@ -1,0 +1,14 @@
+{
+  "fixture_notice": "Entirely synthetic, authored for this project's automated tests. Not Mendeley records or evidence of Bangladesh prices, brands, coverage, or statistics. No personal information or externally sourced rows.",
+  "rows": [
+    {"car_name": "Example Motors Sample A", "brand": "Example Motors", "car_model": "Sample A", "model_year": "2018", "transmission": "Automatic", "body_type": "Sedan", "fuel_type": "Petrol", "engine_capacity": "1500 cc", "kilometers_run": "65,000 km", "price": "BDT 15,00,000"},
+    {"car_name": "Example Motors Sample A", "brand": "Example Motors", "car_model": "Sample A", "model_year": "2018", "transmission": "Automatic", "body_type": "Sedan", "fuel_type": "Petrol", "engine_capacity": "1500 cc", "kilometers_run": "65,000 km", "price": "BDT 15,00,000"},
+    {"car_name": "  EXAMPLE MOTORS Sample A  ", "brand": "Example   Motors", "car_model": "SAMPLE A", "model_year": "2018", "transmission": "automatic", "body_type": "sedan", "fuel_type": "petrol", "engine_capacity": "1.5 litres", "kilometers_run": "65000", "price": "৳1,500,000"},
+    {"car_name": "Example Motors Sample B", "brand": "Example Motors", "car_model": "Sample B", "model_year": "2020", "transmission": "Automatic", "body_type": "Hatchback", "fuel_type": "Hybrid", "engine_capacity": "1.8 L", "kilometers_run": "৪৫,০০০ km", "price": "22.5 lakh"},
+    {"car_name": "Example Motors Sample C", "brand": "Example Motors", "car_model": "Sample C", "model_year": "", "transmission": "unknown", "body_type": null, "fuel_type": "N/A", "engine_capacity": null, "kilometers_run": null, "price": "N/A"},
+    {"car_name": "Example Motors Invalid", "brand": "Example Motors", "car_model": "Invalid", "model_year": "2019", "transmission": "Manual", "body_type": "Sedan", "fuel_type": "Petrol", "engine_capacity": "-1500 cc", "kilometers_run": "-1 km", "price": "BDT -500000"},
+    {"car_name": "Example Motors Sample D", "brand": "Example Motors", "car_model": "Sample D", "model_year": "2017", "transmission": "Manual", "body_type": "Sedan", "fuel_type": "Petrol", "engine_capacity": "1500 cc", "kilometers_run": "100,000 km", "price": "BDT 500000 down payment"},
+    {"car_name": "Example Motors Review", "brand": "Example Motors", "car_model": "Review", "model_year": "2040", "transmission": "Manual", "body_type": "Sedan", "fuel_type": "Petrol", "engine_capacity": "50 cc", "kilometers_run": "2000000 km", "price": "BDT 150000000"},
+    {"car_name": "Example Motors Sample F", "brand": "Example Motors", "car_model": "Sample F", "model_year": "2018", "transmission": "Automatic", "body_type": "Sedan", "fuel_type": "Petrol", "engine_capacity": "1500", "kilometers_run": "100", "price": "2250000"}
+  ]
+}

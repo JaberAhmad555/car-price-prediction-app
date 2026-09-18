@@ -31,11 +31,13 @@ class RepositoryHygieneTests(unittest.TestCase):
             "data/raw/example.json", "data/processed/example.parquet",
             "data/fixtures/accidental.csv", "ml/valuation/generated.joblib",
             "uploads/photo.jpg", "backend/__pycache__/main.pyc",
+            "artifacts/experiment/pipeline.joblib", "artifacts/valuation/unreviewed.joblib",
         ]
         trackable = [
             ".env.example", "data/schemas/market_record.schema.json",
             "data/manifests/.gitkeep", "data/fixtures/.gitkeep",
             "legacy/car_price_model (1).pkl", "legacy/shap_explainer.pkl",
+            "artifacts/valuation/pipeline.joblib", "artifacts/valuation/manifest.json",
         ]
         result = subprocess.run(
             ["git", "check-ignore", "--no-index", "-z", "--stdin"],

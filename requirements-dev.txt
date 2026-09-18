@@ -1,7 +1,9 @@
-# Phase 1 validation only, pinned from the verified Python 3.13 environment.
+# Phase 1 contracts and Phase 2A local ingestion validation, pinned for Python 3.13.
 # Includes the validator's transitive runtime dependencies.
 attrs==26.1.0
 jsonschema==4.26.0
+openpyxl==3.1.5
+et_xmlfile==2.0.0
 jsonschema-specifications==2025.9.1
 referencing==0.37.0
 rpds-py==2026.6.3

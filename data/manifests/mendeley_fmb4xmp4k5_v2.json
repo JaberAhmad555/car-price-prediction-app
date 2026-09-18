@@ -1,0 +1,107 @@
+{
+  "manifest_version": "0.2a.0",
+  "dataset_id": "mendeley-fmb4xmp4k5-v2",
+  "dataset_name": "Car Dataset: Used cars data from Bikroy.com",
+  "dataset_version": 2,
+  "doi": "10.17632/fmb4xmp4k5.2",
+  "source_url": "https://data.mendeley.com/datasets/fmb4xmp4k5/2",
+  "market": "BD",
+  "authors": [
+    "Fahad Rahman Amik",
+    "Sifat Momen",
+    "Akash Lanard"
+  ],
+  "publication_date": "2024-01-02",
+  "metadata_reviewed_on": "2026-09-18",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_legal_code": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+  "attribution": "Amik, Fahad Rahman; Momen, Sifat; Lanard, Akash (2024), Car Dataset: Used cars data from Bikroy.com, Mendeley Data, V2, doi: 10.17632/fmb4xmp4k5.2. Licensed under CC BY 4.0. Identify normalization changes in any adapted output; do not imply endorsement.",
+  "eligibility_status": "APPROVED_FOR_EXPERIMENTATION",
+  "eligibility_scope": "Historical offline experimentation under the publisher-declared CC BY 4.0 grant; no current-market suitability approval, no marketplace scraping permission, and no assertion that upstream third-party rights were independently cleared.",
+  "intended_allowed_use": "Historical Bangladesh ingestion and authorized MVP experiments under the declared CC BY 4.0 license",
+  "permissions_basis": {
+    "storage": "CC BY 4.0 permits copying the licensed material",
+    "ml_experimentation": "CC BY 4.0 permits adaptation for any purpose, subject to its conditions and rights actually licensed",
+    "redistribution": "Permitted for the licensed material with attribution, license link, modification notices and no additional restrictions; full-file redistribution is not chosen for this repository",
+    "automated_collection": "Only the published official file download was attempted. No permission for live marketplace collection is inferred. HTTP 403 must not be bypassed."
+  },
+  "publisher_reported_row_count": 1209,
+  "publisher_reported_columns": [
+    "car_name",
+    "brand",
+    "car_model",
+    "model_year",
+    "transmission",
+    "body_type",
+    "fuel_type",
+    "engine_capacity",
+    "kilometers_run",
+    "price"
+  ],
+  "raw_status": "LOCAL_RELEASE_DECLARED_BY_OPERATOR",
+  "original_filename": "car_dataset.csv",
+  "file_sha256": "cec972d4cf707424115d7d965ea3355d267c45f80543f82a1c3482c27e907e69",
+  "retrieved_on": "2026-09-18",
+  "actual_row_count": 1209,
+  "actual_column_names": [
+    "car_name",
+    "brand",
+    "car_model",
+    "model_year",
+    "transmission",
+    "body_type",
+    "fuel_type",
+    "engine_capacity",
+    "kilometers_run",
+    "price"
+  ],
+  "collection_date": null,
+  "collection_date_unknown": true,
+  "collection_date_evidence": "Original collection dates are not stated in the accessible dataset description. Publication is not collection or listing date.",
+  "download_attempted_on": "2026-09-18",
+  "download_attempts": [
+    {
+      "url": "https://data.mendeley.com/datasets/fmb4xmp4k5/2",
+      "result": "HTTP 403"
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/fmb4xmp4k5/versions/2",
+      "result": "HTTP 403"
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/fmb4xmp4k5/versions/2/files",
+      "result": "HTTP 403"
+    }
+  ],
+  "raw_directory": "data/raw/",
+  "normalization": {
+    "price_format_status": "BARE_INTEGER_FULL_BDT_CONFIRMED_BY_AUTHORS_TABLE_1",
+    "bare_price_unit": null,
+    "bare_price_unit_evidence": null,
+    "bare_engine_unit": null,
+    "bare_engine_unit_evidence": null,
+    "mileage_unit_evidence": "kilometers_run identifies kilometres; all 1209 inspected values are bare integers."
+  },
+  "verified_unit_profile": {
+    "file_sha256": "cec972d4cf707424115d7d965ea3355d267c45f80543f82a1c3482c27e907e69",
+    "price_unit": "BDT",
+    "engine_unit": "cc",
+    "evidence": "Authors' paper https://www.mdpi.com/2078-2489/12/12/514 Table 1 explicitly defines price in taka and engine_capacity in cc. Inspected local V2 car_dataset.csv contains bare integer values. Preserve price integers as full BDT with multiplier 1 and engine integers as cc; kilometers_run specifies km. This reviewed convention applies automatically only to these exact file bytes.",
+    "reviewed_on": "2026-09-19"
+  },
+  "review_thresholds": {
+    "description": "Initial review heuristics only. Values outside these ranges are retained and flagged, never silently corrected. These are not measured dataset statistics or learned market limits.",
+    "price_min_bdt": 100000,
+    "price_max_bdt": 100000000,
+    "mileage_max_km": 1000000,
+    "engine_min_cc": 400,
+    "engine_max_cc": 10000,
+    "model_year_min": 1950,
+    "rare_category_count_below": 5,
+    "imbalance_min_rows": 20,
+    "imbalance_share": 0.8
+  },
+  "retrieval_date_basis": "Date received by this local workflow; original web download date is unknown",
+  "source_verification": "Operator supplies the official V2 release; matching headers do not independently prove provenance"
+}

@@ -34,13 +34,16 @@ node_modules/
 .vercel/
 out/
 *.tsbuildinfo
+/frontend/next-env.d.ts
 
 # Local data, uploads, experiments and generated ML artifacts.
 /data/*
 !/data/schemas/
 !/data/manifests/
 !/data/fixtures/
-/artifacts/
+/artifacts/*
+!/artifacts/valuation/
+/artifacts/valuation/*
 /models/
 /checkpoints/
 /runs/
@@ -76,6 +79,11 @@ out/
 *.tmp
 /tmp/
 /temp/
+
+# Reviewed release bundle only; raw data and other experiments remain ignored.
+!/artifacts/valuation/pipeline.joblib
+!/artifacts/valuation/manifest.json
+!/artifacts/valuation/README.md
 
 # Deliberate historical exceptions; no general model-artifact exception.
 !/legacy/car_price_model (1).pkl
